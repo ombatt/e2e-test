@@ -1,0 +1,19 @@
+{
+    "name": "go-to-apps",
+    "module": "test",
+    "default_sleep": 3,
+    "steps": [
+      {
+        "exp_value": "login",
+        "action": "module",
+        "description": "step per login",
+        "params": {"param1":"insert here your username", "param2":"insert here your password"}
+      },
+      {
+        "exp_type":"XPATH",
+        "exp_value": "//div[@title='Apps']",
+        "action": "click",
+        "description": "click apps menù"
+      }
+    ]
+  }

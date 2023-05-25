@@ -1,0 +1,46 @@
+{
+    "name": "login",
+    "module": "common",
+    "default_sleep": 3,
+    "steps": [
+      {
+        "link": "https://login.microsoftonline.com/",
+        "exp_type" : "",
+        "action": "goto",
+        "description": "go to login page"
+      },
+      {
+        "exp_type":"NAME",
+        "exp_value" : "loginfmt",
+        "input_value": "#param1",
+        "action": "send_keys",
+        "description": "login - fill username field"
+      },
+      {
+        "exp_type":"CLASS_NAME",
+        "exp_value" : "button_primary",
+        "action": "click",
+        "description": "click login button"
+      },      
+      {
+        "exp_type":"NAME",
+        "exp_value" : "passwd",
+        "input_value": "#param2",
+        "action": "send_keys",
+        "description": "login - fill password field"
+      },      
+      {
+        "exp_type":"CLASS_NAME",
+        "exp_value" : "button_primary",
+        "action": "click",
+        "description": "click login button"
+      },      
+      {
+        "exp_type":"CLASS_NAME",
+        "exp_value" : "button_primary",
+        "action": "click",
+        "exp_sleep" : 3,
+        "description": "click remember button"
+      }
+    ]
+  }
